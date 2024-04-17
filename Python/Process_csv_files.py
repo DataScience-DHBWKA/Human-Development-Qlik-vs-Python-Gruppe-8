@@ -3,7 +3,7 @@ import os
 
 def process_csv_files(folder_path):
     # Get list of all CSV files in the folder
-    exclude_file = 'suicide_rates_age_stadardized.csv'
+    exclude_file = 'suicide_rates.csv'
     file_paths = [
         os.path.join(folder_path, file)
         for file in os.listdir(folder_path)
