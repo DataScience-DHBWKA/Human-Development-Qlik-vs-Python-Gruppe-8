@@ -3,8 +3,12 @@ import os
 
 def process_csv_files(folder_path):
     # Get list of all CSV files in the folder
-    file_paths = [os.path.join(folder_path, file) for file in os.listdir(folder_path) if file.endswith('.csv')]
-
+    exclude_file = 'suicide_rates_age_stadardized.csv'
+    file_paths = [
+        os.path.join(folder_path, file)
+        for file in os.listdir(folder_path)
+        if file.endswith('.csv') and file != exclude_file
+    ]
     # List to store DataFrames
     dfs = []
 
@@ -60,12 +64,3 @@ def process_csv_files(folder_path):
     df = combined_df.drop(indices_to_delete)
 
     return df
-
-# Call the function with the folder path
-folder_path = 'data'
-result_df = process_csv_files(folder_path)
-
-# Display the number of rows and columns in the DataFrame
-num_rows, num_cols = result_df.shape
-print("Number of rows:", num_rows)
-print("Number of columns:", num_cols)
