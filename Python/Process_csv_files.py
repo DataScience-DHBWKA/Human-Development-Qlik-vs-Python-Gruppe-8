@@ -60,7 +60,4 @@ def process_csv_files(folder_path):
     for df in dfs[1:]:
         combined_df = pd.merge(combined_df, df, on=['Country or Area', 'Year'], how='outer')
 
-    indices_to_delete = [0, 1]
-    df = combined_df.drop(indices_to_delete)
-
-    return df
+    return combined_df
