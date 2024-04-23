@@ -67,3 +67,32 @@ Abschlusspr¨asentation
 • Diskussion ca. 10min je Gruppe
 • Letze beiden Termine f¨ur 29.04.2024 und 08.05.2024
 
+
+
+Portfolio: Leitfragen orientiert an CRISP-DM
+• F¨ur den von Ihnen gew¨ahlten Datensatz beschreiben Sie
+Business und Data Understanding
+• Beschreiben Sie das von Ihnen gew¨ahlte Visualisierungstool -
+wie beschreibt der Hersteller den Zweck des Tools?
+• Wie kommen Sie zum Data Understanding? Verwenden Sie
+daf¨ur Python und das von Ihnen gew¨ahlten Tool? Welche
+Unterschiede fallen Ihnen auf?
+• Wenn Sie die Daten in Python und in Ihr Tool laden, welche
+Unterschiede gibt es? Welche Datenformate werden
+unterst¨utzt?
+• Welches Daten Preprocessing muss durchgef¨uhrt werden?
+Vergleichen Sie die Tools.
+
+Portfolio: Leitfragen orientiert an CRISP-DM
+• K¨onnen Sie eine Fragestellung ableiten? Inwiefern k¨onnen Sie
+diese beantworten mit Hilfe von Python und mit dem
+Visualisierungstool? Welche Unterschiede fallen Ihnen auf.
+Welche Bedinungen und Voraussetzungen gibt es?
+• Inwiefern k¨onnen die Ergebnisse pr¨asentiert werden?
+• Erstellen Sie eine SWOT Analyse f¨ur Ihr Tool und Python
+
+Portfolio: Grundlegende Darstellungen
+• K¨onnen Sie in Ihrem Tool Liniendiagramme,
+Balkendiagramme und Scatterplots erstellbar? Was f¨allt Ihnen
+auf im Vergleich zu Python Matplotlib?
+• Sind Regressionen m¨oglich in Ihrem Tool?
