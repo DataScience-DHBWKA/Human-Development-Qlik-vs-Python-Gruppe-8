@@ -3,12 +3,12 @@ import os
 
 def process_csv_files(folder_path):
     # Get list of all CSV files in the folder
-    exclude_file = 'suicide_rates.csv'
     file_paths = [
         os.path.join(folder_path, file)
         for file in os.listdir(folder_path)
-        if file.endswith('.csv') and file != exclude_file
+        if file.endswith('.csv')
     ]
+    
     # List to store DataFrames
     dfs = []
 
@@ -16,14 +16,10 @@ def process_csv_files(folder_path):
         df = pd.read_csv(file_path)
 
         # Rename columns
-        df.rename(columns={
-            'Year(s)': 'Year',
-            'Time Period': 'Year', 
-            'Reference Area': 'Country or Area',
-            'Observation Value': 'Value', 
-            'Country or territory of origin': 'Country or Area',
-            'Refugees*': 'Value'},
-        inplace=True)
+        df.rename(columns={'Year(s)': 'Year', 'Time Period': 'Year', 'Reference Area': 'Country or Area',
+                           'Observation Value': 'Value', 'Country or territory of origin': 'Country or Area',
+                           'Refugees*': 'Value', 'Countries, territories and areas': 'Country or Area'},
+                  inplace=True)
 
         # Filter out rows with year 2101
         df = df[df['Year'] != 2101]
@@ -49,15 +45,9 @@ def process_csv_files(folder_path):
         df.columns = custom_names
         dfs.append(df)
 
-        # Find rows where 'Year' column contains 'Footnote'
-        rows_with_footnote = df[df['Year'] == 'Footnote']
-        if not rows_with_footnote.empty:
-            print(f"Footnote found in file: {file_path}")
-            print(rows_with_footnote)
-
     # Merge the DataFrames based on 'Country or Area' and 'Year'
     combined_df = dfs[0]
     for df in dfs[1:]:
         combined_df = pd.merge(combined_df, df, on=['Country or Area', 'Year'], how='outer')
-
+    
     return combined_df
