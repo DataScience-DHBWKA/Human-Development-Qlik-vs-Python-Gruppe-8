@@ -1,10 +1,8 @@
 import seaborn as sns
 import matplotlib.pyplot as plt
-from Process_csv_files import process_csv_files
+from Filtered_data import result_df
 
-# Call the function with the folder path
-folder_path = 'data'
-result_df = process_csv_files(folder_path)
+result_df = result_df.dropna()
 
 # Display the number of rows and columns in the DataFrame
 num_rows, num_cols = result_df.shape
