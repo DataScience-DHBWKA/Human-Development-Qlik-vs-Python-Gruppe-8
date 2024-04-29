@@ -2,13 +2,15 @@ import pandas as pd
 import os
 
 def process_csv_files(folder_path):
+
     # Get list of all CSV files in the folder
-    file_paths = [
-        os.path.join(folder_path, file)
-        for file in os.listdir(folder_path)
-        if file.endswith('.csv')
-    ]
-    
+    folder_path = 'data'
+    files_to_exclude = ['natural_disasters.csv', 'WHR2024.csv']
+    file_paths = []
+    for file in os.listdir(folder_path):
+        if file.endswith('.csv') and file not in files_to_exclude:
+            file_paths.append(os.path.join(folder_path, file))
+
     # List to store DataFrames
     dfs = []
 
@@ -49,5 +51,5 @@ def process_csv_files(folder_path):
     combined_df = dfs[0]
     for df in dfs[1:]:
         combined_df = pd.merge(combined_df, df, on=['Country or Area', 'Year'], how='outer')
-    
+
     return combined_df
