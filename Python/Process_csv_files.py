@@ -5,7 +5,7 @@ from python_param import folder_path
 def process_csv_files(folder_path):
 
     # Get list of all CSV files in the folder
-    files_to_exclude = ['natural_disasters.csv', 'WHR2024.csv']
+    files_to_exclude = ['natural_disasters.csv', 'WHR2021.csv']
     file_paths = []
     for file in os.listdir(folder_path):
         if file.endswith('.csv') and file not in files_to_exclude:
