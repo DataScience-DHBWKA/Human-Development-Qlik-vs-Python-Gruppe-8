@@ -1,8 +1,8 @@
 import pandas as pd
-from Python_param import folder_path
+from Python_param import folder_path_2
 
 suicide_df = pd.DataFrame()
-suicide_df = pd.read_csv(folder_path + '/suicide_rates.csv')
+suicide_df = pd.read_csv(folder_path_2 + '/suicide_rates.csv')
 
 for column in suicide_df.columns[1:]:
     # Extract point estimates from entries in the column
