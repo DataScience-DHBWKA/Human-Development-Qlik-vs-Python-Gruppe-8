@@ -1,6 +1,6 @@
 import pandas as pd
 from Filtered_data import result_df
-from python_param import output_file_path
+from Python_param import output_file_path
 
 #Let's go export with csv
 result_df.to_csv(output_file_path, index=False)

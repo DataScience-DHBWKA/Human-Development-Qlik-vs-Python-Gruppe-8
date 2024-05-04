@@ -1,6 +1,6 @@
 import seaborn as sns
 import matplotlib.pyplot as plt
-from python_param import folder_path
+from Python_param import folder_path
 from Process_csv_files import process_csv_files
 
 # Call the function with the folder path

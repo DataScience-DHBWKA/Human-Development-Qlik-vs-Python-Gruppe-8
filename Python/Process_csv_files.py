@@ -1,6 +1,6 @@
 import pandas as pd
 import os
-from python_param import folder_path
+from Python_param import folder_path
 
 def process_csv_files(folder_path):
 

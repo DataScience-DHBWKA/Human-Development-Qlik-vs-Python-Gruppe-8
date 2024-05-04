@@ -1,5 +1,5 @@
 import pandas as pd
-from python_param import folder_path
+from Python_param import folder_path
 
 suicide_df = pd.DataFrame()
 suicide_df = pd.read_csv(folder_path + '/suicide_rates.csv')

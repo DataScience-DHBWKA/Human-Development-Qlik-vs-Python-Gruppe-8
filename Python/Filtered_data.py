@@ -1,5 +1,5 @@
 from Process_csv_files import process_csv_files
-from python_param import folder_path
+from Python_param import folder_path
 
 # Call the function with the folder path
 result = process_csv_files(folder_path)
