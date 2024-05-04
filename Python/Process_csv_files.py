@@ -52,4 +52,6 @@ def process_csv_files(folder_path):
     for df in dfs[1:]:
         combined_df = pd.merge(combined_df, df, on=['Country or Area', 'Year'], how='outer')
 
+    combined_df["total_population"] *= 1000
+
     return combined_df
