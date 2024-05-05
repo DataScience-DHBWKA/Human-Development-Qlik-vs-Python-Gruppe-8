@@ -3,7 +3,7 @@ import os
 import pandas as pd
 parent_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(parent_dir)
-from Python_param import folder_path
+from python_param import folder_path
 
 def process_csv_files(folder_path):
 
