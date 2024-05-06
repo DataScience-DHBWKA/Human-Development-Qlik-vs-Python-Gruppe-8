@@ -5,8 +5,8 @@ parent_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(parent_dir)
 from python_param import folder_path
 
+# Define a function to process CSV files in a given folder
 def process_csv_files(folder_path):
-
     # Get list of all CSV files in the folder
     files_to_exclude = ['natural_disasters.csv', 'WHR2021.csv']
     file_paths = []
@@ -17,6 +17,7 @@ def process_csv_files(folder_path):
     # List to store DataFrames
     dfs = []
 
+    # Iterate through each CSV file
     for file_path in file_paths:
         df = pd.read_csv(file_path)
 
@@ -55,6 +56,7 @@ def process_csv_files(folder_path):
     for df in dfs[1:]:
         combined_df = pd.merge(combined_df, df, on=['Country or Area', 'Year'], how='outer')
 
+    # Multiply 'total_population' column by 1000
     combined_df["total_population"] *= 1000
 
     return combined_df
