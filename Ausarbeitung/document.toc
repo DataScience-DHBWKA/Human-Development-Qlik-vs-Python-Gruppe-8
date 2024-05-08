@@ -1,6 +1,19 @@
 \babel@toc {ngerman}{}\relax 
-\contentsline {section}{\numberline {1}Einleitung}{2}{}%
-\contentsline {section}{\numberline {2}Hauptteil}{2}{}%
-\contentsline {subsection}{\numberline {2.1}Abschnitt 1}{2}{}%
-\contentsline {subsection}{\numberline {2.2}Abschnitt 2}{2}{}%
-\contentsline {section}{\numberline {3}Schluss}{2}{}%
+\contentsline {section}{\numberline {1}Einleitung}{3}{}%
+\contentsline {subsubsection}{\numberline {1.0.1}Ziele und Features von Looker Studio laut Hersteller?}{3}{}%
+\contentsline {subsubsection}{\numberline {1.0.2}Überblick Nutzung von Looker Studio}{3}{}%
+\contentsline {section}{\numberline {2}Vergleich Looker und Python}{3}{}%
+\contentsline {subsection}{\numberline {2.1}Einleitung}{3}{}%
+\contentsline {subsection}{\numberline {2.2}Effektivität}{3}{}%
+\contentsline {subsection}{\numberline {2.3}Benutzerfreundlichkeit}{3}{}%
+\contentsline {subsection}{\numberline {2.4}Flexibilität}{3}{}%
+\contentsline {subsection}{\numberline {2.5}Interaktivität und Skalierbarkeit}{3}{}%
+\contentsline {subsection}{\numberline {2.6}Zusammenarbeit und Teilen}{3}{}%
+\contentsline {subsection}{\numberline {2.7}Integration}{3}{}%
+\contentsline {subsection}{\numberline {2.8}Barrierefreiheit}{3}{}%
+\contentsline {subsection}{\numberline {2.9}Kosten und Lizenzierung}{3}{}%
+\contentsline {section}{\numberline {3}SWOT-Analyse}{3}{}%
+\contentsline {subsection}{\numberline {3.1}Python}{3}{}%
+\contentsline {subsection}{\numberline {3.2}Looker}{3}{}%
+\contentsline {subsection}{\numberline {3.3}Welches Tool eignet sich ggf. unter verschiedenen Anwendungsszenarien?}{3}{}%
+\contentsline {section}{\numberline {4}Fazit}{3}{}%
