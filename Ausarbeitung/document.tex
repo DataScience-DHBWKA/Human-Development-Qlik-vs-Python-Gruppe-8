@@ -1,0 +1,73 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{geometry}
+\usepackage{titlesec}
+\usepackage{tocloft}
+
+% Seitenränder einstellen
+\geometry{left=3cm,right=3cm,top=3cm,bottom=3cm}
+
+% Zeilenabstand einstellen
+\onehalfspacing
+
+% Überschriften formatieren
+\titleformat{\section}{\normalfont\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalfont\large\bfseries}{\thesubsection}{1em}{}
+
+% Inhaltsverzeichnis anpassen
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}} % Punkte im Inhaltsverzeichnis
+\renewcommand{\contentsname}{Inhaltsverzeichnis} % Umbenennung des Inhaltsverzeichnisses
+
+\begin{document}
+	
+	% Titelseite
+	\begin{titlepage}
+		\centering
+		{\scshape\LARGE Titel der Arbeit \par}
+		\vspace{1cm}
+		{\Large\itshape Vorname Nachname\par}
+		\vspace{0.5cm}
+		{\Large\itshape Vorname2 Nachname2\par}
+		\vspace{0.5cm}
+		{\Large\itshape Vorname3 Nachname3\par}
+		\vspace{2cm}
+		{\Large\itshape Betreut von\par}
+		Prof. Dr. Betreuer \textsc{Name}
+		
+		\vfill
+		
+		% Unterer Teil der Seite
+		{\large Datum\par}
+	\end{titlepage}
+	
+	% Inhaltsverzeichnis
+	\tableofcontents
+	\newpage
+	
+	% Einleitung
+	\section{Einleitung}
+	Die Einleitung...
+	
+	% Hauptteil
+	\section{Hauptteil}
+	\subsection{Abschnitt 1}
+	Text für Abschnitt 1...
+	
+	\subsection{Abschnitt 2}
+	Text für Abschnitt 2...
+	
+	% Schluss
+	\section{Schluss}
+	Zusammenfassung und Schlussfolgerungen...
+	
+	% Literaturverzeichnis
+	\begin{thebibliography}{9}
+		\bibitem{beispiel1} Autor1, A. (Jahr). Titel der Quelle 1. Verlag.
+		\bibitem{beispiel2} Autor2, B. (Jahr). Titel der Quelle 2. Verlag.
+	\end{thebibliography}
+	
+\end{document}
