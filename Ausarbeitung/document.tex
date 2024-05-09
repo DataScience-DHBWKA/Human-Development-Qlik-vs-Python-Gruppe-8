@@ -27,7 +27,7 @@
 \begin{document}
 	\pagenumbering{gobble}
 	
-	\title{Vergleich der Visualisierungsmöglichkeiten in Qlik und Python am Beispiel Human Development}
+	\title{Vergleich der Visualisierungstools Qlik und Python am Beispiel Human Development}
 	\author{Philippe Denig, Jakob Dietrich, Luis Rastetter}
 	\date{\today}
 	
@@ -71,6 +71,12 @@
 	Dazu werden insgesamt 10 Datensätze genutzt, 7 davon stammen von UNData. UNData ist eine Datensammlung der Vereinten Nationen über verschiedenste Themen, unter anderem Human Development. Die verwendeten Datensätze sind in ihrem Format daher sehr ähnlich und bestehen immer aus den Spalten Land, Jahr und dem Wert des jeweiligen Datensatzes. Somit liegt immer nur eine Datenspalte pro Datensatz vor, weshalb sieben Datensätze benötigt werden. Die Daten stammen primär von den einzelnen Unterorganisationen der UN wie beispielsweise der World Health Organisation (WHO) und sind somit als seriös einzustufen. Einer der übrigen drei Datensätze über Selbstmordraten stammt von der WHO direkt, da er nicht über UNData veröffentlicht wurde und ist somit ebenfalls als gesicherte Quelle zu betrachten. Die restlichen beiden Datensätze stammen von Kaggle, einem Webportal, auf dem Datensätze veröffentlicht werden können. Die ursprüngliche Quelle des Datensatzes über Naturkatastrophen liegt dabei bei der NASA und wurde größtenteils mit dem Satellitenprogramm Earth Observing System Data and Information System (EOSDIS) und dessen Vorgängern gesammelt. Grundsätzlich liefert dieser Datensatz also ebenfalls verlässliche Daten, es gilt aber zu beachten, dass die Daten zwar bis 1900 zurückreichen, aber bis 1970 insbesondere kleinere Naturkatastrophen fehlen. Der letzte Datensatz ist der World Happiness Report.
 	aus dem Jahr 2021. Dieser bewertet das Glücksempfinden der Menschen verschiedener Länder und wird von einem internationalen Team aus Wissenschaftlern zusammengestellt, weshalb auch dieser eine seriöse Quelle darstellt. Es gilt allerdings zu beachten, dass der hier verwendete finale Wert des Glücksempfindens auf Basis vieler Faktoren berechnet wird und nur ein Teil der Bewertung auf Umfragen an den Bürgern der Länder basiert.
 	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=1.0\textwidth]{Daten}
+		\caption{Übersicht über die Datensätze}
+	\end{figure}
+	
 	Durch die Verwendung solch qualitativ hochwertiger und verlässlicher Datensätze wird sichergestellt, dass die zum Thema Human Development gewonnenen Erkenntnisse aussagekräftig sind und dass die Visualisierungen mit den beiden Tools in einer realistischen Situation getestet und bewertet werden können.
 	\section{Vergleich zwischen Qlik und Python}
 	
@@ -83,7 +89,7 @@
 	In Qlik lassen sich neue Datensätze in Form von einzelnen Dateien schnell per Drag-and-Drop hinzufügen und es werden alle gängigen Dateiformate bis auf JSON unterstützt. Bei JSON Dateien ist eine Vorverarbeitung notwendig. Das Hinzufügen der Dateien in Python dauert bedeutend länger, da sie erst per Codezeile eingelesen werden müssen und das Schreiben dieser einige Zeit braucht, dafür existieren keinerlei Einschränkungen bezüglich des Dateiformats.
 	\begin{figure}[h]
 		\centering
-		\includegraphics[width=0.5\textwidth]{dragndrop}
+		\includegraphics[width=1.0\textwidth]{dragndrop}
 		\caption{Drag-and-Drop}
 	\end{figure}
 	
@@ -98,7 +104,7 @@
 	In Python lässt sich Datenexploration insbesondere mit Pandas gut durchführen. Durch die Nutzung eines Panda Dataframes werden dem Nutzer viele Befehle wie head(), info() und describe() zur Verfügung gestellt. Mit diesen lässt sich ein guter Überblick über die Struktur des Datensatzes erhalten. Zudem gibt es die Funktion isna(), mit der NaN-Werte identifiziert werden können.	
 	\begin{figure}[h]
 		\centering
-		\includegraphics[width=0.5\textwidth]{info()}
+		\includegraphics[width=1.0\textwidth]{info()2}
 		\caption{Drag-and-Drop}
 	\end{figure}
 	In Qlik kann über die allgemeine Struktur des Datensatzes in dem Reiter Überblick eine gute Übersicht erstellt werden. Für weitere Details kann in den Reiter Felder gewechselt werden. In diesem sind Informationen über die einzelnen Spalten eines Datensatzes zu finden und es werden Visualisierungen zur Verteilung der Werte angezeigt. Zudem ist hier ein Einblick der ersten 10 Zeilen in Tabellenform, sowie eine Auflistung der einzelnen Spalten inklusive Datentyp zu finden.
@@ -189,17 +195,20 @@
 	Zusätzlich zu den drei Hauptphasen des Toolvergleichs gibt es einen Sonstiges-Schritt, der sich mit anderen wichtigen Aspekten wie Kosten, Benutzerfreundlichkeit, Support und anderen nicht direkt im CRISP-DM Prozess enthaltenen Faktoren befasst.
 	Insbesondere ohne vorherige Programmiererfahrung ist der Anfang in Python schwer. Aber durch eine Vielzahl von Büchern, Videos und anderen unterstützenden Lernmaterialien ist es möglich Python in einem angemessenen Rahmen zu erlernen. Zu Qlik gibt es deutlich weniger Lernmaterialien, aber ein dennoch vollkommen ausreichender Umfang. Unter anderem stellt Qlik selbst eine Online Lernplattform zur Verfügung. Ähnlich verhält es sich mit der Dokumentation, Foren und Communitys und KI. Bei allem gibt es mehr bezüglich Python, aber auch bei Qlik sind die Informationen vollkommen ausreichend. Stabilitätsproblem sind bei keinem der beiden Tools aufgefallen. Kollaboratives Arbeiten wird immer wichtiger, speziell in den Bereichen Datenanalyse und BI. In Python findet die Zusammenarbeit für gewöhnlich über Versionskontrollsysteme wie z.B. git oder Cloudplattformen wie Google Colab statt. Qlik bietet für den Unternehmensgebrauch eine integrierte Lösung mit einer Vielzahl von Kollaborationsmöglichkeiten wie z.B. der Storytelling-Funktion, mit der durch Datenpräsentationen kommuniziert werden kann.
 	In Python können Daten in wenigen Zeilen Code in einer Vielzahl von Dateiformaten exportiert werden, Qlik bietet weniger Optionen, aber die wichtigsten wie csv, xml für Daten und pdf und png für Grafiken sind verfügbar. Python ist grundsätzlich kostenlos und Open Source, einige spezielle Bibliotheken und wenn notwendig Cloud Plattformen können aber Kosten verursachen. Die Preisgestaltung bei Qlik ist etwas komplizierter, es gibt grundsätzlich drei verschiedene Pakete mit unterschiedlichen Features % Bild
-	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=1.0\textwidth]{prices}
+		\caption{Preisübersicht}
+	\end{figure}
 	 Vollbenutzer sind Benutzer, die vollen Zugriff auf alle Funktionen haben, Basisbenutzer können nur mit den Apps interagieren und sie sich anschauen.
-	Die Preisgestaltung für zusätzliche Vollbenutzer und Basisnutzer ist leider nicht zu finden, es gibt nur eine Preistabelle für weitere andere Nutzungsarten.
-	% Bild
+	Die Preisgestaltung für zusätzliche Vollbenutzer und Basisnutzer ist leider nicht zu finden.
 	\section{SWOT Analyse}
 	
 	\subsection{Python}
 	
 	\subsubsection{Data Scientist}
 	
-	Als Data Scientist erhält man mit Python ein Tool, das sehr flexibel im Umgang mit Daten
+	Als Data Scientist steht einem mit Python ein Tool zur Verfügung, das sehr flexibel im Umgang mit Daten
 	ist. Zudem ist es kostenlos und erhält diverse Möglichkeiten zur Visualisierung von
 	Daten, womit die einzelnen Schritte des CRISP-DM Prozesses problemlos durchlaufen
 	werden können.
@@ -209,18 +218,14 @@
 	Universalwerkzeug.
 	Außerdem bietet der Einsatz der Programmiersprache den Vorteil, dass bereits erlernte
 	Kenntnisse nicht verlernt werden.
-	Dennoch gibt es immer auch irgendwelche Nachteile oder mögliche Gefahren.
-	So ist Python, wie im vorherigen Toolvergleich bereits erwähnt, nicht immer sehr
-	übersichtlich und erfordert auch gute Programmierkenntnisse, damit adäquate
-	Ergebnisse erzeugt werden können. Besitzt man diese nicht, wird es schwer geeignete
-	Visualisierung zu entwerfen.
-	Weiter sind im Umgang mit dem Datensatz zwar keine größeren Leistungsprobleme
-	aufgetreten, dennoch gibt es andere Programmiersprachen, die etwas schneller
-	arbeiten. Erahnen lassen konnte sich das anhand der Erstellung des Pair-Plots, da
-	hierbei schon ein wenig mehr Zeit verstrichen ist, bis die Visualisierung sichtbar wurde.
-	Auch ist der zu betreibende Aufwand für gute Modellierungen durchaus als Schwäche
-	anzuerkennen, was natürlich auch die Gefahr bringt, dass mit der Zeit Konkurrenz durch
-	spezialisierte Software auf dem Markt entsteht, in welcher dieser Aufwand verringert wird.
+	Dennoch liegen auch Nachteile vor.
+	So ist Python, wie im vorherigen Toolvergleich bereits erwähnt, oft nicht
+	übersichtlich und erfordert gute Programmierkenntnisse, damit adäquate
+	Ergebnisse erzeugt werden können. 
+	Weiter sind im Umgang mit den Datensätzen zwar keine größeren Leistungsprobleme
+	aufgetreten, dennoch arbeiten andere Programmiersprachen teilweise schneller. Erahnen lassen konnte sich das anhand der Erstellung des Pair-Plots, da das Erstellen der Visualisierung dabei vergleichsweise lang dauerte.
+	Außerdem ist der zu betreibende Aufwand für gute Modellierungen durchaus als Schwäche
+	anzuerkennen, weshalb spezialisierte Software, die mit geringerem Aufwand verbunden ist, eine große Konkurrenz darstellt.
 	\begin{figure}[h]
 		\centering
 		\includegraphics[width=1.0\textwidth]{SWOT1}
@@ -229,28 +234,24 @@
 	
 	\subsubsection{Betrieblicher Entscheider}
 	
-	Als betrieblicher Entscheider hat man differenzierte Präferenzen als ein Data Scientist,
-	der jeden Tag mit diversen Daten arbeitet. So muss man auch Geschäftsdaten in einem
-	Dashboard präsentieren, um später damit mögliche Geschäftsentscheidungen
-	begründen zu können. Dementsprechend ist es hierfür notwendig, eine zweite SWOT-
-	Analyse zu konfigurieren.
-	Für betriebliche Entscheider, für die nicht die besten Erfahrungen im Umgang mit Python
-	zu erwarten sind, bietet die Programmiersprache vor allem Stärken, indem sie sehr
+	Für betriebliche Entscheider sind andere Eigenschaften von Bedarf als für Data Scientists. So müssen beispielsweise Geschäftsdaten in einem
+	Dashboard präsentiert werden, um später damit mögliche Geschäftsentscheidungen
+	begründen zu können. Dementsprechend ist es hierfür notwendig, eine zweite SWOT-Analyse zu konfigurieren.
+	Für betriebliche Entscheider bietet die Programmiersprache vor allem den Vorteil, dass sie sehr
 	umfangreiche Bibliotheken und auch viele unterstützende Dokumentationen besitzt.
 	Damit kann vielen Unerfahrenen geholfen werden, geeignete Modellierungen zu
-	konzipieren. Dies eröffnet zudem die Möglichkeit, spätere Dashboards in Hinsicht auf
+	konzipieren. Dies eröffnet zudem die Möglichkeit, spätere Dashboards im Hinblick auf
 	jede Komponente individuell anzupassen, weil die Bibliotheken nahezu unbegrenzt sind
 	und gut erklärt werden.
 	Ferner kann Python auch in andere unternehmensinterne Software integriert werden,
-	sodass es auch abseits der Daten Visualisierung vielfach zum Einsatz kommen kann.
-	Allerdings stehen auf der gegenüberliegenden Seite auch einige Schwachstellen, welche
-	Python in Bezug auf die Nutzung durch einen betrieblichen Entscheider offenbart.
-	So gibt es zum Beispiel keine Standardisierung von Dashboards innerhalb des Tools. Vor
-	allem bei mangelhaften Programmierkenntnissen, kann es in diesem Fall schwer
-	werden geeignete und anschauliche Dashboards für die Präsentation gegenüber Dritten
-	zu erstellen. Diese fehlende Ästhetik birgt auch die Gefahr, dass dadurch eine gewisse
-	Überzeugungskraft der Daten verloren geht und der hohe Aufwand mehr oder minder
-	umsonst aufgebracht wird.
+	sodass es auch abseits der Datenvisualisierung vielfach zum Einsatz kommen kann.
+	Allerdings stehen auf der gegenüberliegenden Seite auch einige Schwachstellen von
+	Python in Bezug auf die Nutzung durch einen betrieblichen Entscheider.
+	So gibt es z.B. keine Standardisierung von Dashboards innerhalb des Tools. Vor
+	allem bei mangelhaften Programmierkenntnissen kann es schwer
+	werden, geeignete und anschauliche Dashboards für die Präsentation gegenüber Dritten
+	zu erstellen. Diese fehlende Ästhetik birgt die Gefahr, dass dadurch die
+	Überzeugungskraft der Daten verloren geht.
 	Damit zeigt Python einige Nachteile für Unternehmer auf, die lediglich Daten
 	präsentieren wollen, aber nicht das nötige Hintergrundwissen für die Benutzung des
 	Tools mitbringen.
@@ -265,18 +266,18 @@
 	\subsubsection{Data Scientist}
 	
 	Um einem potenziellen Data Scientist verschiedene Optionen für den Einsatz eines
-	Datenvisualisierungstools geben, soll nun noch eine SWOT-Analyse für das vorherige
+	Datenvisualisierungstools geben, soll nun noch eine SWOT-Analyse für das vorher
 	betrachtete Qlik präsentiert werden.
-	Ansprechende Aspekte an Qlik für einen Data Scientist dürften definitiv darin beruhen,
+	Ansprechend an Qlik für einen Data Scientist dürften definitiv darin beruhen,
 	dass es wirklich benutzerfreundlich und übersichtlich ist. Selbst wenn zu spezifischen
 	Aspekten Unklarheiten aufkommen sollten, können diese in den meisten Fällen mithilfe
 	von Online-Tutorials und Dokumentationen beseitigt werden. Zu beinahe jedem Problem
 	können Entscheidungsfindungen durch das Internet herangezogen werden.
-	Was während der Test-Nutzung für die Tool-Analyse auch als Vorteil aufgetreten ist, ist
+	Was während der Test-Nutzung für die Tool-Analyse auch als Vorteil aufgefallen ist, ist
 	die Leichtigkeit, mit welcher bei bereits gesäuberten Datensätzen verschiedene
 	Modellierungen erstellt und auch die einzelnen Dimensionen und Ebenen verändert
 	werden können.
-	Dadurch entsteht die Möglichkeit ohne viel Aufwand schnell und direkt Visualisierungen
+	Dadurch entsteht die Möglichkeit, ohne viel Aufwand schnell und direkt Visualisierungen
 	zu erstellen und diese auch individuell anzupassen. Dies ist durchaus leichter
 	vorzunehmen als in Python.
 	Allerdings ist ein Data Scientist aber auch an einer möglichst großen Auswahl an
@@ -288,16 +289,12 @@
 	Im Vergleich bietet Python durch die Erweiterbarkeit der vielen Bibliotheken eine
 	deutlich größere Palette an Möglichkeit, sodass beim Einsatz von Qlik auf einige
 	Grafiktypen verzichtet werden muss.
-	Weiter ist für den Data Scientist aber auch die fehlende Möglichkeit für das Data
+	Weiter ist für den Data Scientist aber auch die begrenzte Möglichkeit für das Data
 	Cleaning und die Data Preparation ein Nachteil, da Datenmengen, welche
 	Inkonsistenzen beinhalten, somit weniger gut bearbeitet werden können. Dies führt
-	folgendermaßen zu schlechteren Visualisierungen und dementsprechend auch einem
+	zu schlechteren Visualisierungen und dementsprechend auch einem
 	geringeren Nutzwert für den Endanwender.
-	Außerdem ist die kostenlose Test-Version von Qlik nur für 30 Tage gültig, wodurch die
-	Gefahr besteht, dass längerfristige Projekte nur mit dem Einsatz dieses Tools und ohne
-	den Einsatz von zusätzlichen Kosten nicht möglich sind. Für einen Data Scientist, der
-	womöglich noch privat mit dem Tool arbeiten will, sind 30 US-Dollar pro Monat nämlich
-	schon eine beträchtliche Summe.
+	Die Kosten des Tools für Unternehmen belaufen sich auf mindestens 825€ pro Monat und ist damit deutlich teurer als Python.
 	Zudem macht man sich durch den Kauf des Tools auch abhängig vom Verkäufer, indem
 	man auf die neuesten Updates und Features warten muss, während diese womöglich in
 	anderen Tools schon vorhanden sind.
