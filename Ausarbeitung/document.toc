@@ -6,17 +6,17 @@
 \contentsline {section}{\numberline {2}Vergleich zwischen Qlik und Python}{4}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Einleitung Vergleich}{4}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Data Understanding}{4}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Data Preperation}{7}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Modeling}{7}{subsection.2.4}%
-\contentsline {subsection}{\numberline {2.5}Sonstiges}{9}{subsection.2.5}%
-\contentsline {section}{\numberline {3}SWOT Analyse}{10}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Python}{10}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Qlik}{10}{subsection.3.2}%
-\contentsline {subsubsection}{\numberline {3.2.1}Data Scientist}{11}{subsubsection.3.2.1}%
-\contentsline {subsubsection}{\numberline {3.2.2}Betrieblicher Entscheider}{11}{subsubsection.3.2.2}%
-\contentsline {subsubsection}{\numberline {3.2.3}Data Scientist}{12}{subsubsection.3.2.3}%
-\contentsline {subsubsection}{\numberline {3.2.4}Betrieblicher Entscheider}{13}{subsubsection.3.2.4}%
-\contentsline {section}{\numberline {4}Fazit}{14}{section.4}%
-\contentsline {section}{\numberline {5}Quellen}{15}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Quellen Datensätze}{15}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}weitere Quellen}{15}{subsection.5.2}%
+\contentsline {subsection}{\numberline {2.3}Data Preparation}{9}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Modeling}{10}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Sonstiges}{12}{subsection.2.5}%
+\contentsline {section}{\numberline {3}SWOT Analyse}{13}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Python}{13}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.1}Data Scientist}{13}{subsubsection.3.1.1}%
+\contentsline {subsubsection}{\numberline {3.1.2}Betrieblicher Entscheider}{14}{subsubsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.2}Qlik}{15}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Data Scientist}{15}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}Betrieblicher Entscheider}{16}{subsubsection.3.2.2}%
+\contentsline {section}{\numberline {4}Fazit}{17}{section.4}%
+\contentsline {section}{\numberline {5}Quellen}{19}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Quellen Datensätze}{19}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}weitere Quellen}{19}{subsection.5.2}%

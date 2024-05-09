@@ -5,6 +5,7 @@
 \usepackage{geometry}
 \usepackage{setspace}
 \usepackage{helvet}
+\usepackage{graphicx}
 
 \geometry{
 	a4paper,
@@ -57,18 +58,18 @@
 	\subsection{Was ist Qlik}
 	Qlik ist eine der führenden Plattformen im Bereich der BI und wurde speziell für interaktive Datenanalyse und Datenvisualisierung konzipiert. Das Qlik Universum umfasst eine breite Produktpalette, durch die eine umfassende BI-Lösung zur datengetriebenen Entscheidungsunterstützung für Unternehmen verschiedener Größen und Branchen geboten wird. Im Zentrum stehen die beiden Datenvisualisierungs- und Datenanalyse-Tools Qlik View und Qlik Sense. Diese werden durch weitere Anwendungen wie z.B. Qlik Data für Datenmanagement unterstützt. Qlik View dient primär der Analytik und ist auf die Entwicklung von individuellen Anwendungen für die Datenanalyse ausgerichtet. Es ermöglicht Benutzern, komplexe Daten aus verschiedenen Quellen zu kombinieren, zu transformieren und zu visualisieren, um Einblicke zu gewinnen und fundierte Entscheidungen zu treffen. Qlik Sense wurde hingegen entwickelt, um eine breitere Benutzerbasis anzusprechen und bietet eine benutzerfreundliche, self-service-orientierte Plattform für die Datenvisualisierung und -analyse.
 	
-	In dieser Arbeit werden die Qlik Coud Services in der "Qlik Sense Business - International Version"  betrachtet, da diese Version einen 30-tägigen Testzeitraum anbietet, mit dem unverbindlich und kostenlos ein umfassender Einblick in die Plattform gegeben wird. Außerdem bietet Qlik Sense im Vergleich zu Qlik View ein flexibleres Arbeitsumfeld und eine simplere Bedienung und steht somit mehr für moderne BI-Tools und grenzt sich weiter von Python ab.
+	In dieser Arbeit werden die Qlik Cloud Services in der "Qlik Sense Business - International Version"  betrachtet, da diese Version einen 30-tägigen Testzeitraum anbietet, mit dem unverbindlich und kostenlos ein umfassender Einblick in die Plattform gegeben wird. Außerdem bietet Qlik Sense im Vergleich zu Qlik View ein flexibleres Arbeitsumfeld und eine simplere Bedienung und steht somit mehr für moderne BI-Tools und grenzt sich weiter von Python ab.
 	
 	\subsection{Was ist Python}
-	Python ist eine der am weitesten verbreiteten Programmiersprachen und spielt eine zentrale Rolle im Feld der Datenvisualisierung. Dank vieler starker Bibliotheken in diesem Bereich wie z.B. Matplotlib, Seaborn und Plotly bietet Python eine schier endlose Bandbreite an Möglichkeiten. Matplotlib bietet eine solide Grundlage für Diagramme und Graphiken, Seaborn hingegen stellt einen mehr auf Statistik basierneden Ansatz dar und mit Plotly können die Darstellungen weiter verfeinert werden, indem z.B. interaktive Elemente hinzugefügt werden. Außerhalb des tatsächlichen Visualisierungsprozesses kommen noch weitere Datenverarbeitungswerkzeuge wie Numpy und Pandas hinzu. Außerdem hat Python eine sehr große Community und es existieren zahlreiche kostenlose Lernuntertützungen.
+	Python ist eine der am weitesten verbreiteten Programmiersprachen und spielt eine zentrale Rolle im Feld der Datenvisualisierung. Dank vieler starker Bibliotheken in diesem Bereich wie z.B. Matplotlib, Seaborn und Plotly bietet Python eine schier endlose Bandbreite an Möglichkeiten. Matplotlib bietet eine solide Grundlage für Diagramme und Grafiken, Seaborn hingegen stellt einen mehr auf Statistik basierneden Ansatz dar und mit Plotly können die Darstellungen weiter verfeinert werden, indem z.B. interaktive Elemente hinzugefügt werden. Außerhalb des tatsächlichen Visualisierungsprozesses kommen noch weitere Datenverarbeitungswerkzeuge wie Numpy und Pandas hinzu. Außerdem hat Python eine sehr große Community und es existieren zahlreiche kostenlose Lernunterstützungen.
 	Insgesamt ist Python eine flexible Basis und in Kombination mit den entsprechenden Bibliotheken bietet Python breit gefächerte Möglichkeiten im Bereich der Datenvisualisierung.
 	
 	\subsection{Datensätze}
 	Da der Toolvergleich am Beispiel Human Development durchgeführt wird, werden hier kurz die verwendeten Datensätze und deren Quellen vorgestellt.
 	Human Development ist ein sehr breites Themengebiet, hier werden daher nur einzelne Aspekte wie Lebenserwartung, Geburtenrate und Todesfälle durch Naturkatastrophen betrachtet.
 	
-	Dazu werden insgesamt 10 Datensätze genutzt, 7 davon stammen von UNData. UNData ist eine Datensammlung der Vereinten Nationen über verschiedenste Themen, unter anderem Human Development. Die verwendeten Datensätze sind in ihrem Format daher sehr ähnlich und bestehen immer aus den Spalten Land, Jahr und dem Wert des jeweiligen Datensatzes. Somit liegt immer nur eine Datenspalte pro Datensatz vor, weshalb sieben Datensätze benötigt werden. Die Daten stammen primär von den einzelnen Unterorganisationen der UN wie beispielsweise der WHO und sind somit als seriös einzustufen. Einer der übrigen drei Datensätze über Selbstmordraten stammt von der WHO direkt, da er nicht über UNData veröffentlicht wurde und ist somit ebenfalls als gesicherte Quelle zu betrachten. Die restlichen beiden Datensätze stammen von Kaggle, einem Webportal, auf dem Datensätze veröffentlicht werden können. Die ursprüngliche Quelle des Datensatzes über Naturkatastrophen liegt dabei bei der NASA und wurde größtenteils mit dem Satellitenprogramm EOSDIS und dessen Vorgängern gesammelt. Grundsätzlich liefert dieser Datensatz also ebenfalls verlässliche Daten, es gilt aber zu beachten, dass die Daten zwar bis 1900 zurückreichen, aber bis 1970 insbesondere kleinere Naturkatastrophen fehlen. Der letzte Datensatz ist der World Happiness Report.
-	aus dem Jahr 2021. Dieser bewertet das Glücksempfinden der Menschen verschiedener Länder und wird von einem internationalen Team aus Wissenschaftlern zusammengestellt, weshalb auch er eine seriöse Quelle darstellt. Es gilt allerdings zu beachten, dass der hier verwendete finale Wert des Glücksempfindens auf Basis vieler Faktoren berechnet wird und nur ein Teil der Bewertung auf Umfragen an den Bürgern der Länder basiert.
+	Dazu werden insgesamt 10 Datensätze genutzt, 7 davon stammen von UNData. UNData ist eine Datensammlung der Vereinten Nationen über verschiedenste Themen, unter anderem Human Development. Die verwendeten Datensätze sind in ihrem Format daher sehr ähnlich und bestehen immer aus den Spalten Land, Jahr und dem Wert des jeweiligen Datensatzes. Somit liegt immer nur eine Datenspalte pro Datensatz vor, weshalb sieben Datensätze benötigt werden. Die Daten stammen primär von den einzelnen Unterorganisationen der UN wie beispielsweise der World Health Organisation (WHO) und sind somit als seriös einzustufen. Einer der übrigen drei Datensätze über Selbstmordraten stammt von der WHO direkt, da er nicht über UNData veröffentlicht wurde und ist somit ebenfalls als gesicherte Quelle zu betrachten. Die restlichen beiden Datensätze stammen von Kaggle, einem Webportal, auf dem Datensätze veröffentlicht werden können. Die ursprüngliche Quelle des Datensatzes über Naturkatastrophen liegt dabei bei der NASA und wurde größtenteils mit dem Satellitenprogramm Earth Observing System Data and Information System (EOSDIS) und dessen Vorgängern gesammelt. Grundsätzlich liefert dieser Datensatz also ebenfalls verlässliche Daten, es gilt aber zu beachten, dass die Daten zwar bis 1900 zurückreichen, aber bis 1970 insbesondere kleinere Naturkatastrophen fehlen. Der letzte Datensatz ist der World Happiness Report.
+	aus dem Jahr 2021. Dieser bewertet das Glücksempfinden der Menschen verschiedener Länder und wird von einem internationalen Team aus Wissenschaftlern zusammengestellt, weshalb auch dieser eine seriöse Quelle darstellt. Es gilt allerdings zu beachten, dass der hier verwendete finale Wert des Glücksempfindens auf Basis vieler Faktoren berechnet wird und nur ein Teil der Bewertung auf Umfragen an den Bürgern der Länder basiert.
 	
 	Durch die Verwendung solch qualitativ hochwertiger und verlässlicher Datensätze wird sichergestellt, dass die zum Thema Human Development gewonnenen Erkenntnisse aussagekräftig sind und dass die Visualisierungen mit den beiden Tools in einer realistischen Situation getestet und bewertet werden können.
 	\section{Vergleich zwischen Qlik und Python}
@@ -80,6 +81,11 @@
 	Im ersten Schritt des Toolvergleichs wird sich auf das Data Understanding fokussiert, bei welchem es darum geht, die Daten im entsprechenden Tool hinzuzufügen und eine umfassende Übersicht über die verfügbaren Datenquellen, deren Qualität, Struktur und potenzielle Einschränkungen zu gewinnen.
 
 	In Qlik lassen sich neue Datensätze in Form von einzelnen Dateien schnell per Drag-and-Drop hinzufügen und es werden alle gängigen Dateiformate bis auf JSON unterstützt. Bei JSON Dateien ist eine Vorverarbeitung notwendig. Das Hinzufügen der Dateien in Python dauert bedeutend länger, da sie erst per Codezeile eingelesen werden müssen und das Schreiben dieser einige Zeit braucht, dafür existieren keinerlei Einschränkungen bezüglich des Dateiformats.
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.5\textwidth]{dragndrop}
+		\caption{Drag-and-Drop}
+	\end{figure}
 	
 	Der Prozess des Daten Hinzufügens in Qlik ist intuitiv und gut beschrieben, sodass bei der ersten Nutzung alles ohne Probleme funktioniert hat. Auch große Datensätze stellen kein Problem dar. Laut Qlik liegt die maximale Dateigröße bei 100 Gigabyte. Die Geschwindigkeit des Uploads hängt von der Uploadgeschwindigkeit des Users ab, da die hier genutzte Qlik Version mit einer Cloud arbeitet. Python kann sowohl lokal, als auch in einer Cloud verwendet werden. Bei lokaler Nutzung gibt es keine Verzögerungen durch den Upload, bei Nutzung einer Cloud hängt es ebenfalls von der Uploadgeschwindigkeit des Nutzers ab.
 	In Python ist eine Nutzung von APIs mit entsprechenden Bibliotheken wie z.B. Request einfach möglich.
@@ -90,23 +96,57 @@
 	Der nächste wichtige Schritt des Data Understanding ist die Datenexploration. Das Tool sollte dem Nutzer die Möglichkeit bieten, einen groben Überblick über den Datensatz zu bekommen, speziell das Erkennen von NaN-Werte spielt hier eine große Rolle.
 	
 	In Python lässt sich Datenexploration insbesondere mit Pandas gut durchführen. Durch die Nutzung eines Panda Dataframes werden dem Nutzer viele Befehle wie head(), info() und describe() zur Verfügung gestellt. Mit diesen lässt sich ein guter Überblick über die Struktur des Datensatzes erhalten. Zudem gibt es die Funktion isna(), mit der NaN-Werte identifiziert werden können.	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.5\textwidth]{info()}
+		\caption{Drag-and-Drop}
+	\end{figure}
 	In Qlik kann über die allgemeine Struktur des Datensatzes in dem Reiter Überblick eine gute Übersicht erstellt werden. Für weitere Details kann in den Reiter Felder gewechselt werden. In diesem sind Informationen über die einzelnen Spalten eines Datensatzes zu finden und es werden Visualisierungen zur Verteilung der Werte angezeigt. Zudem ist hier ein Einblick der ersten 10 Zeilen in Tabellenform, sowie eine Auflistung der einzelnen Spalten inklusive Datentyp zu finden.
 	
 	Bisher liegen in Qlik die Daten nur als einzelne in die Cloud hochgeladene Dateien vor, mit ihnen kann aber noch nichts bis auf die Datenexploration der einzelnen Datensätze durchgeführt werden. Um die Daten weiter zu verarbeiten, muss eine App (ein Arbeitsdokument, das eine analytische Anwendung darstellt) erstellt werden und die Daten müssen hinzugefügt werden. Das Hinzufügen der Daten geht einfach, der Benutzer kann aus den Daten, die er in Qlik hochgeladen hat, auswählen, welche er der App hinzufügen möchte. Es ist auch möglich, nur einzelne Spalten aus Datensätzen auszuwählen. Dieser Prozess hat in der Basisversion ein Limit von 1260 Megabyte und dauert bei größeren Datensätzen bis hin zu einigen Minuten.
-	Nach dem Datenupload werden sofort, ohne dass weitere Aktionen des Benutzers erforderlich sind, Vorschläge unterbreitet, anhand welcher Spalten sich die einzelnen Datensätze miteinander verknüpfen lassen. Anschließend können im Datenmanager die einzelnen Datensätze per Drag-and-Drop ent- und verknüpft werden. Die zusammengehörenden Spalten werden automatisch festgestellt. Falls dies nicht möglich ist, kann manuell gewählt werden, welche Spalten verknüpft werden sollen.
+	Nach dem Datenupload werden sofort, ohne dass weitere Aktionen des Benutzers erforderlich sind, Vorschläge unterbreitet, anhand welcher Spalten sich die einzelnen Datensätze miteinander verknüpfen lassen. Anschließend können im Datenmanager die einzelnen Datensätze per Drag-and-Drop ent- und verknüpft werden.
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.5\textwidth]{connect}
+		\caption{Drag-and-Drop Verknüfung}
+	\end{figure}
+	Die zusammengehörenden Spalten werden automatisch festgestellt. Falls dies nicht möglich ist, kann manuell gewählt werden, welche Spalten verknüpft werden sollen.
 	Es ist in Qlik auf diesem Weg nicht möglich, einzelne Datensätze über zwei Mountpoints miteinander zu verknüpfen, was am Beispiel der Human Development Datensätze erforderlich gewesen wäre. Stattdessen kann diese Vernüpfung nur über Skripte in Qlik erreicht werden, was immer noch den Vorteil gegenüber einer Vorbearbeitung in Python hat, dass alles in einer Anwendung ablaufen kann und keine Daten übertragen werden müssen.
 	Außerdem können hier Datensätze in zwei Teile aufgetrennt werden.
 	Im Datenmanager existiert neben der Verknüfungsperspektive die Tabellenperspektive. Hier lässt sich nach einem einzelnen Wert, wie z.B. einem NaN-Wert suchen.
 	Zur besseren Visualisierung der Verknüpfungen kann auch in den Datenmodell-Viewer gewechselt werden, hier sind die einzelnen Datensätze in Tabellenform mit Verknüpfungen zwischen den einzelnen Spalten dargestellt.
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.5\textwidth]{table_viewer}
+		\caption{Datenmodell-Viewer}
+	\end{figure}
 	Nach jeder Änderung im Datenmanager müssen die Daten erneut wenige Sekunden geladen werden, bevor weiter mit ihnen gearbeitet werden kann.
 	Nach Verlassen des Datenmanagers ist es möglich, mit dem Insight Advisor zu den einzelnen Spalten verschiedene Visualisierungen zu erstellen, zusätzlich ist das auch durch eine Beschreibung mit natürlicher Sprache möglich. In Python würden solche Visualisierungen zur Datenexploration vergleichsweise lange dauern.
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.5\textwidth]{bsp_ask}
+		\caption{Insight Advisor - natürliche Sprache}
+	\end{figure}
 	
 	Somit stellt Qlik eine ähnliche Bandbreite an Data Understanding Funktionen wie Python zur Verfügung, während die meisten Prozesse deutlich schneller und effizienter ablaufen. Es treten primär Probleme bei der Verarbeitung von JSON Dateien und bei sehr großen Dateien über einem Gigabyte auf.
 	
-	\subsection{Data Preperation}
+	\subsection{Data Preparation}
 	In der Data Preparation geht es darum, die Daten für die Analyse vorzubereiten, indem sie gereinigt, transformiert und in das richtige Datenformat gebracht werden, um sicherzustellen, dass sie für den Modellierungsschritt geeignet sind.
 	Ein wichtiger Schritt dazu besteht darin, NaN-Werte zu entfernen und Zeilen und Spalten zu editieren. In Python kann das mit den entsprechenden Befehlen wie dropna() oder fillna() der Pandas Bibliothek ohne großen Zeitaufwand umgesetzt werden.
 	Qlik bietet diese Funktionen im Tabelleneditor.
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.5\textwidth]{bsp_ask}
+		\caption{Insight Advisor - natürliche Sprache}
+	\end{figure}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.5\textwidth]{bsp_ask}
+		\caption{Insight Advisor - natürliche Sprache}
+	\end{figure}
+	
+	
 	Strukturänderungen im Datensatz wie z.B. Aggregation und Disaggregation sind auch in beiden Tools möglich, in Python z.B. mit groupby() mit entsprechenden Parametern, in Qlik gibt es die Funktionen Sum(), Avg(), Count(), Min() und Max().
 	Datenverknüpfungen in Qlik wurden im letzten Abschnitt  ausreichend beschrieben, in Python ist das mit der  merge() Funktion ebenfalls möglich.
 	Datentypänderungen sind in Qlik im Datenmanager möglich, in Python sind sie mit der Funktion astype() umsetzbar.
@@ -117,8 +157,27 @@
 	Im Modeling-Schritt werden die vorbereiteten Daten verwendet, um Visualisierungsmodelle zu erstellen. Ziel ist es, visuelle Darstellungen und Interaktionsmöglichkeiten zu entwickeln, die es ermöglichen, Muster, Trends und Beziehungen in den Daten zu erkennen und zu kommunizieren.
 	
 	Zur finalen Visualisierung von Daten in Qlik muss zunächst ein Sheet erstellt werden, dann stehen verschiedene Diagrammarten zur Verfügung, zu denen dann die entsprechenden Daten zugeordnet werden.
-	In Python sind grundsätzlich alle Diagrammarten möglich. Die Auswahl in Qlik ist etwas begrenzter, aber die grundlegenden Diagramme wie Balken-, Linien-, Kreis- und auch etwas komplexere Diagramme wie Heatmaps, Histogramme und eine Weltkarte sind verfügbar. Es fehlen z.B. Gantt-Charts zur Visualisierung von Projektphasen oder Violin Plots.
-	Im Bereich Human Development spielen Geovisualisierungen eine wichtige Rolle. Qlik bietet eine Weltkarte zur Visualisierung, manuell muss nur die entsprechende Zeile mit Strings die Länder, Regionen oder Städte beschreiben oder Geokodierungsinformationen, wie Längen- und Breitengrade der Weltkarte zugeordnet werden, dann wird automatisch eine entsprechende Karte erstellt, durch die Zoomfunktion ist es auch möglich kleinere Regionen detailliert darzustellen. In Python sind Geovisualisierung mit den Bibliotheken Matplotlib und Plotly ebenfalls möglich, indem nur die entsprechende Spalte zugeordnet wird und die Zuordnung der Länder auf der Karte erfolgt automatisch. In Python sind insbesondere die Gestaltungsmöglichkeiten weniger begrenzt als bei Qlik. Hier fällt z.B. auf, dass in Python die Wahl der Hintergrundkarte möglich ist und die entsprechenden Regionen auch eingefärbt werden können.
+	In Python sind grundsätzlich alle Diagrammarten möglich. Die Auswahl in Qlik ist etwas begrenzter, aber die grundlegenden Diagramme wie Balken-, Linien-, Kreis- und auch etwas komplexere Diagramme wie Heatmaps, Histogramme und eine Weltkarte sind verfügbar. 
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.5\textwidth]{easy_linechart}
+		\caption{durchschnittliche Selbstmordraten als Beispiel einer einfachen Visualisierung in Qlik}
+	\end{figure}
+	
+	Es fehlen z.B. Gantt-Charts zur Visualisierung von Projektphasen oder Violin Plots.
+	Im Bereich Human Development spielen Geovisualisierungen eine wichtige Rolle. Qlik bietet eine Weltkarte zur Visualisierung, manuell muss nur die entsprechende Zeile mit Strings die Länder, Regionen oder Städte beschreiben oder Geokodierungsinformationen, wie Längen- und Breitengrade der Weltkarte zugeordnet werden, dann wird automatisch eine entsprechende Karte erstellt, durch die Zoomfunktion ist es auch möglich kleinere Regionen detailliert darzustellen. In Python sind Geovisualisierung mit den Bibliotheken Matplotlib und Plotly ebenfalls möglich, indem nur die entsprechende Spalte zugeordnet wird und die Zuordnung der Länder auf der Karte erfolgt automatisch. In Python sind insbesondere die Gestaltungsmöglichkeiten weniger begrenzt als bei Qlik.
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.5\textwidth]{life_exp_qlik}
+		\caption{Lebenserwartung 2020 visualisiert mit Qlik}
+	\end{figure}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.5\textwidth]{life_exp_python}
+		\caption{Lebenserwartung 2020 visualisiert mit Python}
+	\end{figure}
+	
+	Hier fällt z.B. auf, dass in Python die gesamten Länder entsprechend der Skala eingefärbt werden können.
 	Insbesondere die farblichen Gestaltungsmöglichkeiten sind in Python deutlich ausgeprägter, bei anderen Gestaltungen wie z.B. Achsenbeschriftungen bietet Qlik alle notwendigen Features. Auch die Qualität ist mit beiden Tools auf einem hohen Niveau, es treten keine unscharfen Stellen oder Überlappungen auf. Der allgemeine Prozess der Erstellung einer Visualisierung ist in Qlik schnell und intuitiv durchzuführen, zuerst wird der Diagrammtyp gewählt, dann den Achsen eine Spalte aus den Tabellen zuweisen und dann ist die Visualisierung schon fertig. In Python sind Visualisierungen ein deutlich größerer Zeitaufwand, da auch bei sehr simplen Visualisierungen die Zuweisungen immer getippt werden müssen. Dadurch wird grundsätzlich mehr Zeit beansprucht, auch wenn der Programmierer alle notwendigen Befehle kennt, was insbesondere bei einer größeren Bandbreite an Visualisierungen nicht unbedingt der Fall ist. Falls die für eine Visualisierung benötigten Daten nicht direkt vorliegen, sondern erst noch aus anderen Spalten berechnet werden müssen, bietet Qlik die Möglichkeit eine neue Spalte aus bestehenden mit einer frei wählbaren Formel zu berechnen. Die Auswahl an Rechenoperationen für einen solchen Anwendungsfall begrenzter als in Python, es existieren auch Funktionen um Strings zusammenzusetzen. Und falls die direkt verfügbaren Funktionen nicht ausreichen, gibt es durch Skripts noch weitaus mehr Optionen.
 	Die Echtzeitdaten, die über eine API integrierbar sind, lassen sich auch in Echtzeit visualisieren, die Visualisierungen im Tool werden also verändert, wenn neue Daten hinzugefügt werde. Dadurch ist es in Qlik auch möglich, Dashboards zu erstellen, die in Echtzeit bestimmte Daten anzeigen können. Um ein Dashboard zu erstellen werden natürlich einige Grafiken, Steuerlemente und Weiteres benötigt und die Erstellung benötigt einige Zeit, aber es geht immer noch bedeutend schneller als in Python, auch wenn natürlich etwas an Funktionen verloren geht.
 	Die Visualisierungen in Qlik laden auch schnell unter der Verwendung von sehr großen Datensätzen und stehen Python um nichts nach.
@@ -137,7 +196,7 @@
 	
 	\subsection{Python}
 	
-	\subsection{Qlik}
+	\subsubsection{Data Scientist}
 	
 	Als Data Scientist erhält man mit Python ein Tool, das sehr flexibel im Umgang mit Daten
 	ist. Zudem ist es kostenlos und erhält diverse Möglichkeiten zur Visualisierung von
@@ -161,8 +220,11 @@
 	Auch ist der zu betreibende Aufwand für gute Modellierungen durchaus als Schwäche
 	anzuerkennen, was natürlich auch die Gefahr bringt, dass mit der Zeit Konkurrenz durch
 	spezialisierte Software auf dem Markt entsteht, in welcher dieser Aufwand verringert wird.
-	
-	\subsubsection{Data Scientist}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.5\textwidth]{SWOT1}
+		\caption{SWOT Analyse Python Data Scientist}
+	\end{figure}
 	
 	\subsubsection{Betrieblicher Entscheider}
 	
@@ -191,6 +253,13 @@
 	Damit zeigt Python einige Nachteile für Unternehmer auf, die lediglich Daten
 	präsentieren wollen, aber nicht das nötige Hintergrundwissen für die Benutzung des
 	Tools mitbringen.
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.5\textwidth]{SWOT2}
+		\caption{SWOT Analyse Python Betrieblicher Entscheider}
+	\end{figure}
+	
+	\subsection{Qlik}
 	
 	\subsubsection{Data Scientist}
 	
@@ -231,6 +300,11 @@
 	Zudem macht man sich durch den Kauf des Tools auch abhängig vom Verkäufer, indem
 	man auf die neuesten Updates und Features warten muss, während diese womöglich in
 	anderen Tools schon vorhanden sind.
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.5\textwidth]{SWOT3}
+		\caption{SWOT Analyse Qlik Data Scientist}
+	\end{figure}
 	
 	\subsubsection{Betrieblicher Entscheider}
 	
@@ -257,8 +331,13 @@
 	das Geld für dieses nicht vorhanden ist. Wobei die finanzielle Sachlage im betrieblichen
 	Kontext weniger ein Problem sein dürfte als beim Data Scientist, der das Tool auch für
 	private Zwecke benutzt.
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.5\textwidth]{SWOT4}
+		\caption{SWOT Analyse Qlik Betrieblicher Entscheider}
+	\end{figure}
 	
-	\section{Fazit} % Luis --> überarbeiten inhaltlich
+	\section{Fazit}
 	
 	Da in der heutigen Gesellschaft, sowohl im privaten als auch betrieblichen Umfeld,
 	Daten eine immer größere Rolle spielen, ist es wichtig auch ein geeignetes Tool für den
