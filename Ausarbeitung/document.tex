@@ -94,18 +94,25 @@
 	
 	Bisher liegen in Qlik die Daten nur als einzelne in die Cloud hochgeladene Dateien vor, mit ihnen kann aber noch nichts bis auf die Datenexploration der einzelnen Datensätze gemacht werden. Um weiter mit den Daten zu arbeiten muss eine App, in Qlik ist eine App ein Arbeitsdokument, das eine analytische Anwendung darstellt, erstellt werden und die Daten müssen hinzugefügt werden. Das Hinzufügen der Daten geht sehr einfach, der Benutzer kann aus den Daten die er in Qlik hochgeladen hat auswählen, welche er der App hinzufügen möchte. Es ist auch möglich nur einzelne Spalten aus Datensätzen auszuwählen. Dieser Prozess hat in der Basisversion ein Limit von 1260 Megabyte und dauert bei größeren Datensätzen bishin zu wenigen Minuten.
 	Nach dem Datenupload werden sofort, ohne das weitere Aktionen des Benutzers erfolgen müssen Vorschläge unterbreitet, wo sich die einzelnen Datensätze miteinander verknüpfen lassen. Danach bedindet man sich direkt im "Data Manager", in dem man per Drack and Drop die einzelnen Datensätze entknüpfen und verknüpfen kann. Die zusammengehörenden Spalten werden automatisch festgestellt. Falls dies nicht möglich ist, kann manuell gewählt werden, welche Spalten verknüpft werden sollen.
+	Es ist in Qlik auf diesem Weg nicht möglich, einzelne Datensätze über zwei Mountpoints miteinander zu verknüpfen, was am Beispiel der Human Development Datensätze erforderlich gewesen wäre. Es ist nur möglich über Skripte in Qlik diese Verknüpfung zu erreichen, was immernoch den Vorteil gegenüber einer Vorbearbeitung in Python hat, dass alles in einer Anwendung ablaufen kann und keine Daten übertragen werden müssen.
 	Außerdem können hier Datensätze in zwei Teile aufgetrennt werden.
 	Im Datenmanager existiert neben der Verknüfungsperspektive die tabellenperspektive, hier lassen sich ein einzelne Werte wie z.B. NaN-Werte suchen.
 	Zur besseren Visualisierung der Verknüpfungen kann auch in den "Data Model Viewer" gewechselt werden, hier sind die einzelnen Datensätze in Tabellenform mit Verknüpfungen zwischen den einzelnen Spalten dargestellt
 	Nach jeder Änderung im "Data Manager" müssen die Daten erneut wenige Sekunden geladen werden, bevor weiter mit ihnen gearbeitet werden kann.
+	Nach Verlassen des Data Managers ist es möglich, mit dem "Insight Advisor", zu den einzelnen Spalten durch 
+	Auswahl dieser verschiedene Visualisierungen zur besseren Übersichtlichkeit zu erstellen, zusätzlich ist das auch durch eine Beschreibung mit natürlicher Sprache möglich. In Python würden solche Visualisierungen zur Datenexploration vergleichsweise lange dauern.
 	
 	Somit stellt Qlik eine ähnliche Bandbreite an Data Understanding Funktionen wie Python zur Verfügung, während die meisten Prozesse deutlich schneller und effizienter ablaufen. Es treten primär Probleme bei der Verarbeitung von JSON Datein und bei sehr großen Datein über einem Gigabyte auf.
 	
 	\subsection{Data Preperation}
 	Im Data Preparation-Schritt geht es darum, die Daten für die Analyse vorzubereiten, indem sie gereinigt, transformiert und in das richtige Datenformat gebracht werden, um sicherzustellen, dass sie für den Modellierungsschritt geeignet sind.
-	
-	
-	
+	Ein wichtiger Schritt dazu besteht darin, NaN-Werte zu entfernen und Zeilen und Spalten zu editieren. In Python kann das mit den entsprechenden Befehlen wie dropna() oder fillna() der Pandas Bibliothek ohne großen Zeitaufwand umgesetzt werden.
+	Qlik bietet diese Funktionen wieder in Tabelleneditor.
+	Strukturänderungen im Datensatz wie z.B. Aggregation und Disaggregation sind auch in beiden Tools möglich, in Python z.B. mit groupby() mit entsprechenden Parametern, in Qlik gibt es die Funktionen Sum(), Avg(), Count(), Min() und Max().
+	Somit sind auch hier beide Tools sehr breit aufgestellt.
+	Datenverknüpfungen in Qlik wurden im letzten Abschnitt schon ausreichend beschrieben, in Python ist das mit der  merge() Funktion auch möglich.
+	Datentypänderungen sind auch in Qlik in Datenmanager möglich in in Python mit der Funktion astype().
+	Insgesamt unterscheiden sich Qlik und Python im Bereich Data Preparation kaum, Qlik ist zwar grundsätzlich etwas schneller, aber die meisten Python befehle sind nur wenigen Zeichen und somit auch schnell ausgeführt. Qlik bietet alle Grundlegenden Funktionen die notwendig sind, für spezialisisertere Anwendungsfälle stößt man ohne Anwendung von Skripten schnell an Grenzen. Dementsprechend ist Qlik im Bereich Data Preparation eher für die Anwendung auf qualitativ hochwertigeren Daten geeignet und kann dort sehr einfach Strukturänderungen und ähnliches durchführen.
 	
 	
 	\subsection{Modelling}
