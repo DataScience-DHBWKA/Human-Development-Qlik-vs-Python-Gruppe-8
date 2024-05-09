@@ -1,19 +1,19 @@
 \babel@toc {ngerman}{}\relax 
-\contentsline {section}{\numberline {1}Einleitung}{3}{}%
-\contentsline {subsubsection}{\numberline {1.0.1}Ziele und Features von Looker Studio laut Hersteller?}{3}{}%
-\contentsline {subsubsection}{\numberline {1.0.2}Überblick Nutzung von Looker Studio}{3}{}%
-\contentsline {section}{\numberline {2}Vergleich Looker und Python}{3}{}%
-\contentsline {subsection}{\numberline {2.1}Einleitung}{3}{}%
-\contentsline {subsection}{\numberline {2.2}Effektivität}{3}{}%
-\contentsline {subsection}{\numberline {2.3}Benutzerfreundlichkeit}{3}{}%
-\contentsline {subsection}{\numberline {2.4}Flexibilität}{3}{}%
-\contentsline {subsection}{\numberline {2.5}Interaktivität und Skalierbarkeit}{3}{}%
-\contentsline {subsection}{\numberline {2.6}Zusammenarbeit und Teilen}{3}{}%
-\contentsline {subsection}{\numberline {2.7}Integration}{3}{}%
-\contentsline {subsection}{\numberline {2.8}Barrierefreiheit}{3}{}%
-\contentsline {subsection}{\numberline {2.9}Kosten und Lizenzierung}{3}{}%
-\contentsline {section}{\numberline {3}SWOT-Analyse}{3}{}%
-\contentsline {subsection}{\numberline {3.1}Python}{3}{}%
-\contentsline {subsection}{\numberline {3.2}Looker}{3}{}%
-\contentsline {subsection}{\numberline {3.3}Welches Tool eignet sich ggf. unter verschiedenen Anwendungsszenarien?}{3}{}%
-\contentsline {section}{\numberline {4}Fazit}{3}{}%
+\contentsline {section}{\numberline {1}Einleitung}{3}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Was ist Qlik}{4}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Was ist Python}{4}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Datensätze}{5}{subsection.1.3}%
+\contentsline {section}{\numberline {2}Vergleich zwischen Qlik und Python}{6}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Einleitung Vergleich}{6}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Data Understanding}{6}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Data Preperation}{8}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Modelling}{8}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Sonstiges}{8}{subsection.2.5}%
+\contentsline {section}{\numberline {3}SWOT Analyse ???!!!}{9}{section.3}%
+\contentsline {section}{\numberline {4}Fazit}{9}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Python}{9}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Looker}{9}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Wann welches Tool}{9}{subsection.4.3}%
+\contentsline {section}{\numberline {5}Quellen}{9}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Quellen Datensätze}{9}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}weitere Quellen}{9}{subsection.5.2}%

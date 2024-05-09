@@ -1,8 +1,11 @@
 \documentclass[12pt]{article}
 
 \usepackage[ngerman]{babel}
-
+\usepackage{hyperref}
 \usepackage{geometry}
+\usepackage{setspace}
+\usepackage{helvet}
+
 \geometry{
 	a4paper,
 	total={170mm,257mm},
@@ -13,10 +16,15 @@
 }
 
 
+\renewcommand{\familydefault}{\sfdefault} % Setzt die Standardschriftart auf Helvetica (Äquibvalent zu Arial)
+
+\linespread{1.5}
+
+
 \renewcommand{\thefootnote}{\Roman{footnote}}
 
 \begin{document}
-	\title{Ein Vergleich der Visualisierungsmöglichkeiten in Qlik und Python anhand des Themas Human Development}
+	\title{Vergleich der Visualisierungsmöglichkeiten in Qlik und Python am Beispiel Human Development}
 	\author{Philippe Denig, Jakob Dietrich, Luis Rastetter}
 	\date{\today}
 	
@@ -28,42 +36,105 @@
 	
 	\newpage
 	
-	\section{Einleitung}
+	\section{Einleitung} % Fomalien doppelchecken, falls notwendig (Umfang einhalten) anpassen
 	
-	\subsubsection{Ziele und Features von Looker Studio laut Hersteller?}
+	% ChatGPT Quelle oder KI-Prüfung
 	
-	\subsubsection{Überblick Nutzung von Looker Studio}
-	blblabla
+	% Wieso braucht man DV, unterschiedliche Anwedungsszenarien brauchen unterschiedliche Tools, grober Überblick über das Vorgehen
+	% einordbar deutsches Wort?
+	Datenvisualisierung ist ein wichtiger Bestandteil der modernen Datenanalyse. Visualisierungen ermöglichen es, komplexe Informationen effektiv zu kommunizieren, sodass der Empfänger diese schnell erfassen kann. Dadurch spielt Datenvisualisierung in der Wirtschaft und Wissenschaft, aber auch im Privatleben eine entscheidende Rolle, um Erkenntnisse zu gewinnen und Zusammenhänge zu verstehen. Insbesondere im Geschäftsumfeld können gute Visualisierungen dazu beitragen, wichtige Entscheidungen schnell und gut treffen zu können.
 	
-	\section{Vergleich Looker und Python}
-	\subsection{Einleitung}
+	Angesichts der Bedeutung der Datenvisualisierung gibt es eine Vielzahl von Tools und Technologien, die mit unterschiedlichen Ansätzen und Funktionen versuchen bestmögliche Ergebnisse zu liefern. In dieser Arbeit wird sich mit den der Programmiersprache Python im Datenvisualisierungskontext und der Business Intelligence Plattform Qlik beschäftigt und es soll herausgestellt werden, welches Tool sich besser für welche Anwendungszwecke eignet.
 	
-	\subsection{Effektivität}
+	Um einen fundierten Vergleich zu ermöglichen, werden erst beide Tools kurz vorgestellt. Anschließend erfolgt eine systematische Evaluierung anhand verschiedener Aspekte, die sich an den einzelnen Schritten des CRISP-DM Verfahrens orientieren. Das CRISP-DM Verfahren besteht aus den Phasen Business Understanding, Data Understanding, Data Preparation, Modeling, Evaluation und Deployment. Es wird sich jedoch überwiegend auf die Phasen konzentriert, die durch die Tools beeinflusst werden: Data Understanding, Data Preparation und Modelling. Business Understanding, Evaluation und Deployment betreffen primär strategische Aspekte und werden somit nicht direkt von den Funktionen der Tools beeinflusst. Um einen konkreten Anwendungsfall zu illustrieren, wird das Thema Human Development als Beispiel herangezogen. Dadurch wird ein realer Kontext geboten, in dem die Wirksamkeit der Tools bei der Analyse komplexer sozialer und wirtschaftlicher Daten bewertet werden kann. Darüber hinaus wird eine zusätzliche Kategorie "Sonstiges" eingeführt, die sich mit anderen, nicht in den CRISP-DM Prozess einordbaren Aspekten wie Kostenstruktur oder Dokumentation und Support beschäftigt. Dadurch wird eine umfassendere Einschätzung in dem Gesamtkontext der Data Science und Business Intelligence Aktivitäten eines Unternehmens ermöglicht.
 	
-	\subsection{Benutzerfreundlichkeit}
+	Das Ziel ist es, ein tiefgreifendes Verständnis für die Stärken und Schwächen von Python und Qlik im Rahmen der praxisrelevanten Abschnitte des CRISP-DM Verfahrens zu erlangen. Auf Basis dieser methodischen Herangehensweise kann in Zukunft die Entscheidung des am besten für einen spezifischen Anwendungsfall geeigneten Visualisierungstool einfacher getroffen werden.
 	
-	\subsection{Flexibilität}
-
-	\subsection{Interaktivität und Skalierbarkeit}
- 
-
-	\subsection{Zusammenarbeit und Teilen}
-
-	\subsection{Integration}
+	\subsection{Was ist Qlik}
+	Qlik ist eine der führenden Plattformen im Bereich der Business Intelligence und wurde speziell für interaktive Datenanalyse und Datenvisualisierung konzipiert. Das Qlik Universum umfasst eine breite Produktpalette, durch die eine umfassende BI-Lösung zur datengetriebenen Entscheidungsunterstützung für Unternehmen verschiedener Größen und Branchen geboten wird. Im Zentrum stehen die beiden Datenvisualisierung und Datenalyse Tools Qlik View und Qlik Sense, diese werden dann durch weitere Anwendungen wie z.B. Qlik Data für Datenmanagement unterstützt werden. Qlik View dient primär der Analytik und ist auf die Entwicklung von individuellen Anwendungen für die Datenanalyse ausgerichtet. Es ermöglicht Benutzern, komplexe Daten aus verschiedenen Quellen zu kombinieren, zu transformieren und zu visualisieren, um Einblicke zu gewinnen und fundierte Entscheidungen zu treffen. Qlik Sense hingegen wurde entwickelt, um eine breitere Benutzerbasis anzusprechen und bietet eine benutzerfreundliche, self-service-orientierte Plattform für die Datenvisualisierung und -analyse. Mit Qlik Sense können Benutzer interaktive Dashboards und Berichte erstellen, um Daten auf intuitive Weise zu erkunden und zu verstehen.
 	
-	\subsection{Barrierefreiheit}
-
-	\subsection{Kosten und Lizenzierung}
-
-	\section{SWOT-Analyse}
-	\subsection{Python}
-
+	In dieser Arbeit werden ausschließlich die Qlik Coud Services in der "Qlik Sense Business - International Version" betrachtet, da diese Version einen 30-tägigen Testzeitraum anbietet, mit dem unverbindlich und kostenlos ein umfassender Einblick in die Plattform gegeben wird. Außerdem bietet Qlik Sense im Vergleich zu Qlik View ein flexibleres Arbeitsumfeld und eine simplere Bedienung und steht somit mehr für moderne BI-Tools und grenzt sich weiter von Python ab.
+	% kenntlich einbezihen was Qlik slebst sagt?
 	
-	\subsection{Looker}
+	\subsection{Was ist Python}
+	Python ist eine der am weitesten verbreiteten Programmiersprachne und spielt eine zentrale Rolle im Feld der Datenvisualisierung. Dank vieler starter Bibliotheken in diesem Bereich wie z.B. Matplotlib, Seaborn und Plotly bietet Python eine schier endlose Bandbreite and Möglichkeiten. Matplotlib bietet eine solide Grundlage für Diagramme und Graphiken, Seaborn bietet einen mehr auf Statistik basierneden Ansatz und mit Plotly können die Darstellungen weiter verfeinert werden, indem z.B. interaktive Elemente hinzugefügt werden. Außerhalb des tatsächlichen Visualisierungsprozesses kommen noch weitere Datenverarbeitungswerkzeuge wie Numpy und Pandas. Außerdem hat Python eine sehr große Community und es existieren zahlreiche kostenlose Lernuntertützungen.
+	Insgesamt bietet Python eine flexible Basis und in Kombination mit den entsprechenden Bibliotheken ist fast alles möglich.
+	
+	\subsection{Datensätze} % extra subsection notwendig ?
+	Da der Toolvergleich am Beispiel Human Development durchgeführt wird, werden hier kurz die verwendeten Datensätze und deren Quellen vorgestellt.
+	Human Development ist ein sehr breites Themengebiet, daher werden verschiedene Aspekte wie z.B. Lebenserwartung, Geburtenrate und Todesfälle durch Naturkatastrophen betrachtet.
+	
+	Dazu werden insgesamt 10 Datensätze genutzt, 7 davon stammen von UNData. UNData ist eine Datensammlung der Vereinten Nationen über verschiedenste Themen, unter anderem Humand Development. Daher sind die in ihrem Format auch sehr ähnlich und bestehen immer aus einer Spalte Land, einer Spalte Jahr und dann dem Wert des jeweiligen Datensatzes. Da somit immer nur eine Datenspalte pro Datensatz vorliegt, werden 7 Datensätze benötigt. Die Daten stammen primär von den einzelnen Unterorganisationen der UN wie beispielsweise der WHO und sind somit sehr vertrauenswürdig. Einer der übrigen drei Datensätze über Selbstmordraten stammt von der WHO direkt, da er nicht über UNData veröffentlicht wurde und ist somit auch als sehr vertrauenswürdig einzustufen. Die restlichen beiden Datensätze stammen von Kaggle, einem Webportal auf dem Datensätze veröffentlicht werden können. Zum einen stammt ein Datensatz über Naturkatastrophen von Kaggle. Die ursprüngliche Quelle des Datensatzes liegt bei der NASA und wurde größtenteils mit dem Satellitenprogramm EOSDIS und dessen Vorgängern gesammelt. Grundsätzlich ist dieser Datensatz also ebenfalls sehr vertrauenswürdig, es gilt aber zu beachten, dass die Daten zwar bis 1900 zurückreichen, aber bis 1970 insbesondere kleine Naturkatastrophen fehlen. Der letzte Datensatz ist der World Happyness Report (WHR) %kann ich das so kennzeichnen???
+	aus dem Jahr 2021. Der WHR bewertet das Glücksempfinden der Menschen verschiedener Länder und wird von einem internationalen Team aus Wissenschaftlern zusammengestellt und somit ist auch er eine seriöse Quelle darstellt. Es gilt aber zu beachten, dass der hier verwendete finale Wert des Glücksempfindens auf Basis vieler Faktoren berechnet wird und nur ein Teil der Bewertung auf Umfragen an den Bürgern der Länder basiert.
+	
+	Durch die Verwendung solch qualitativ hochwertiger und vertrauenswürdiger Datensätze wird sichergestellt, dass die zum Thema Human Development gewonnenen Erkenntnisse auch aussagekräftig sind und dass die Visualisierungen mit den beiden Tools in einer realistischen Situation getestet und bewertet werden kann.
+	\section{Vergleich zwischen Qlik und Python}
+	
+	\subsection{Einleitung Vergleich}
+	Wie schon in der Einleitung erwähnt, erfolgt der Vergleich anhand der relevanten Phasen des CRISP-DM Prozesses mit der zusätzlichen Kategorie Sonstiges. In den einzelnen Phasen werden Python und Qlik anhand verschiedener für diese Phase relevanten Kriterien evaluiert und es wird ein Bezug zu dem Visualisierungsprozess an dem Thema Human Development hergestellt, der insbesondere durch die große Anzahl an verschiedenen Datensätzen eine besondere Herausforderung darstellt. Im folgenden Vergleich wird davon ausgegangen, dass er Anwender Grundkenntnisse in der Programmierung hat, da ansonsten eine Verwendung von Python ohne vorherigen Lernprozess nicht in Frage kommt, da es zwar im Vergleich zu anderen Programmiersprachen intuitiv ist, aber dennoch nicht ohne Programmierkenntnisse bedienbar ist. Die erforderliche Programmierkenntnisse stellen natürlichen einen großen Minuspunkt dar, auf diesen wird dann wieder im Fazit eingegangen.
+	
+	\subsection{Data Understanding}
+	Im ersten Schritt des Toolvergleichs wird sich auf das Data Understanding fokussiert, bei dem es darum geht, die Daten im entsprechenden Tool hinzuzufügen und eine umfassende Übersicht über die verfügbaren Datenquellen, deren Qualität, Struktur und potenzielle Einschränkungen zu gewinnen.
 
-	\subsection{Welches Tool eignet sich ggf. unter verschiedenen Anwendungsszenarien?}
-
+	In Qlik lassen sich neue Datensätze in Form von einzelnen Dateien sehr schnell per Drag and Drop hinzufügen und es werden alle gängigen Dateiformate bis auf JSON unterstützt. Bei JSON Datein ist eine Vorverarbeitung notwendig. Das Hinzufügen der Datein in Python dauert bedeutend länger, da sie erst per Codezeile eingelesen werden müssen und das Schreiben dieser einige Zeit braucht, dafür existieren keinerlei Einschränkungen bezüglich des Dateiformats.
+	Der Pozess des Daten hinzufügens in Qlik ist sehr intuitiv und gut beschrieben, sodass schon bei der ersten Nutzung alles schnell ohne Probleme funktioniert hat. Auch große Datensätze stellen kein Problem da. Laut Qlik liegt die maximale Dateigröße bei 100 Gigabyte. Die Geschwindigkeit des Uploads hängt von der Uploadgeschwindigkeit des Users ab, da die hier genutze Qlik Version mit einer Cloud arbeitet. Python kann sowohl lokal, als auch in einer Cloud verwendet werden. Bei lokaler Nutzung gibt es keine Verzögerungen durch den Upload, bei Nutzung in einer Cloud hängt es von der Uploadgeschwindigkeit des Nutzers ab.
+	In Python ist eine Nutzung von APIs mit entsprechenden Bibliotheken wie z.B. Request relativ einfach möglich.
+	Auch in Qulik können APIs verwendet werden, aber die Anzahl der APIs ist insbesondere in der Standart Version
+	
+. Mit den Enrsprechenden Bibliotheken bestehen in Python keine Einschränkungen bezüglich des Dateiformats. Da Python lokal genutzt werden kann, bestehen auch keine Einschränkungen bezüglich Dateigrößen oder Uploadzeiten. Außerdem ist mit Bibliotheken wie z.B. Request auch ein einfacher Zugriff auf Api's möglich.
+	
+	In dem hier verwendeten Beispiel Human Development wird eine größere Anzahl an Datensätzen benötigt. Qlik bietet eine sehr gute Übersicht über darüber welche Datensätze hochgeladen sind, es gibt sowohl Raster als auc h Listenansicht und verschiedene Sortieroptionen. In Python lässt sich nur durch die einzelnen Variablennamen eine Übersicht erkennen.
+	
+	In Qlik kann sich über die allgemeine Struktur des Datensatzes in dem Overview Reiter eine gute Übersicht gebildet werden. Für weitere Details kann in den Fields Reiter gewechselt werden, um Informationen über die verteilung der Werte in den einzelnen Spalten zu erhalten. Zudem ist hier in Einblick der ersten 10 Zeilen in Tabellenform zu finden und eine Auflistung der einzelnen Spalten inklusive Datentyp. Durch das Ertellen einer App und das Hinzufügen der Daten zu dieser..., viele weitere Funktionen die ich nicht benutzt habe
+	
+	In Python lassen sich Beispielsweise mit .head() oder isna() ähnliche Effekte erreichen, aber die Darstellung ist weniger schön
+	
+	
+	\subsection{Data Preperation}
+	Im Data Preparation-Schritt geht es darum, die Daten für die Analyse vorzubereiten, indem sie gereinigt, transformiert und in das richtige Datenformat gebracht werden, um sicherzustellen, dass sie für den Modellierungsschritt geeignet sind.
+	
+	
+	
+	\subsection{Modelling}
+	Im Modelling-Schritt werden die vorbereiteten Daten verwendet, um Visualisierungsmodelle zu erstellen. Ziel ist es, visuelle Darstellungen und Interaktionsmöglichkeiten zu entwickeln, die es ermöglichen, Muster, Trends und Beziehungen in den Daten zu erkennen und zu kommunizieren.
+	
+	
+	
+	\subsection{Sonstiges}
+	Zusätzlich zu den drei Hauptphasen des Toolvergleichs gibt es einen Sonstiges-Schritt, der sich mit anderen wichtigen Aspekten wie Kosten, Benutzerfreundlichkeit, Support und anderen nicht direkt im CRISP-DM-Prozess enthaltenen Faktoren befasst.
+	
+	
+	
+	\section{SWOT Analyse ???!!!}
 	
 	\section{Fazit}
+	
+	\subsection{Python}
+
+	\subsection{Looker}
+
+	\subsection{Wann welches Tool}
+	
+	\section{Quellen}
+	% Struktur nach Quellenverzeichnis fehlt, Links, Beschreibungen hinzufügen, dann an den entsprechenden Textstellen kennzeichnen.
+	
+	\subsection{Quellen Datensätze}
+	
+	\begin{enumerate}
+		\item \href{https://example.com}{Beispiel Webseite}
+		\item \href{https://example.org}{Eine andere Beispiel Webseite}
+		\item \href{https://example.org}{Eine andere Beispiel Webseite}
+		\item \href{https://example.org}{Eine andere Beispiel Webseite}
+		\item \href{https://example.org}{Eine andere Beispiel Webseite}
+		\item \href{https://example.org}{Eine andere Beispiel Webseite}
+		\item \href{https://example.org}{Eine andere Beispiel Webseite}
+		\item \href{https://example.org}{Eine andere Beispiel Webseite}
+		\item \href{https://example.org}{Eine andere Beispiel Webseite}
+		\item \href{https://example.org}{Eine andere Beispiel Webseite}
+		
+		\subsection{weitere Quellen}
+		\item \href{https://www.gapminder.org/}{Einige der Fragen an denen der Vergleich durchgeführt wurde wurden von hier übernommen}
+		
+	\end{enumerate}
 	
 \end{document}
