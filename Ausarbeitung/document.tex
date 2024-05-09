@@ -24,6 +24,8 @@
 \renewcommand{\thefootnote}{\Roman{footnote}}
 
 \begin{document}
+	\pagenumbering{gobble}
+	
 	\title{Vergleich der Visualisierungsmöglichkeiten in Qlik und Python am Beispiel Human Development}
 	\author{Philippe Denig, Jakob Dietrich, Luis Rastetter}
 	\date{\today}
@@ -36,6 +38,8 @@
 	
 	\newpage
 	
+	
+	\pagenumbering{arabic}
 	\section{Einleitung} % Fomalien doppelchecken, falls notwendig (Umfang einhalten) anpassen
 	
 	% ChatGPT Quelle oder KI-Prüfung
@@ -79,16 +83,13 @@
 	In Qlik lassen sich neue Datensätze in Form von einzelnen Dateien sehr schnell per Drag and Drop hinzufügen und es werden alle gängigen Dateiformate bis auf JSON unterstützt. Bei JSON Datein ist eine Vorverarbeitung notwendig. Das Hinzufügen der Datein in Python dauert bedeutend länger, da sie erst per Codezeile eingelesen werden müssen und das Schreiben dieser einige Zeit braucht, dafür existieren keinerlei Einschränkungen bezüglich des Dateiformats.
 	Der Pozess des Daten hinzufügens in Qlik ist sehr intuitiv und gut beschrieben, sodass schon bei der ersten Nutzung alles schnell ohne Probleme funktioniert hat. Auch große Datensätze stellen kein Problem da. Laut Qlik liegt die maximale Dateigröße bei 100 Gigabyte. Die Geschwindigkeit des Uploads hängt von der Uploadgeschwindigkeit des Users ab, da die hier genutze Qlik Version mit einer Cloud arbeitet. Python kann sowohl lokal, als auch in einer Cloud verwendet werden. Bei lokaler Nutzung gibt es keine Verzögerungen durch den Upload, bei Nutzung in einer Cloud hängt es von der Uploadgeschwindigkeit des Nutzers ab.
 	In Python ist eine Nutzung von APIs mit entsprechenden Bibliotheken wie z.B. Request relativ einfach möglich.
-	Auch in Qulik können APIs verwendet werden, aber die Anzahl der APIs ist insbesondere in der Standart Version
+	Auch in Qulik können APIs verwendet werden, aber die Anzahl der APIs ist insbesondere in der Standart Version etwas begrenzt.
 	
-. Mit den Enrsprechenden Bibliotheken bestehen in Python keine Einschränkungen bezüglich des Dateiformats. Da Python lokal genutzt werden kann, bestehen auch keine Einschränkungen bezüglich Dateigrößen oder Uploadzeiten. Außerdem ist mit Bibliotheken wie z.B. Request auch ein einfacher Zugriff auf Api's möglich.
+	In dem hier verwendeten Beispiel Human Development wird eine größere Anzahl an Datensätzen benötigt. Qlik bietet eine sehr gute Übersicht darüber, welche Datensätze hochgeladen sind. Die Datensätze lassen sich in Raster- und Listenansicht anzeigen und nach Kriterien wie "recently used" sorteiren, außerdem lassen sich Favoriten festlegen. In Python kann man durch eine übersichtliche Ordnerstruktur im Kombination mit einer guten IDE den Überblick über die verschidenen Dateien bewahren.
 	
-	In dem hier verwendeten Beispiel Human Development wird eine größere Anzahl an Datensätzen benötigt. Qlik bietet eine sehr gute Übersicht über darüber welche Datensätze hochgeladen sind, es gibt sowohl Raster als auc h Listenansicht und verschiedene Sortieroptionen. In Python lässt sich nur durch die einzelnen Variablennamen eine Übersicht erkennen.
-	
-	In Qlik kann sich über die allgemeine Struktur des Datensatzes in dem Overview Reiter eine gute Übersicht gebildet werden. Für weitere Details kann in den Fields Reiter gewechselt werden, um Informationen über die verteilung der Werte in den einzelnen Spalten zu erhalten. Zudem ist hier in Einblick der ersten 10 Zeilen in Tabellenform zu finden und eine Auflistung der einzelnen Spalten inklusive Datentyp. Durch das Ertellen einer App und das Hinzufügen der Daten zu dieser..., viele weitere Funktionen die ich nicht benutzt habe
-	
-	In Python lassen sich Beispielsweise mit .head() oder isna() ähnliche Effekte erreichen, aber die Darstellung ist weniger schön
-	
+	Der nächste wichtige Schritt des Data Understanding ist die Datenexploration. Das Tool sollte dem Nutzer Möglichkeiten bieten, einen groben Überblick über den Datensatz zu bekommen, insbesondere NaN-Werte erkennen spielt hier eine sehr große Rolle.
+	In Python lässt sich Datenexploration insbesondere mit Pandas sehr gut dirchführen. Durch das nutzen eines Panda Dataframes werden dem Nutzer sehr viele Befehle wie head(), info(), describe() zur Verfügung gestellt. Mit diesen lässt sich ein sehr guter Überblick über die Struktur des Datensatzes erhalten. Außerdem gibt es die Funktion isna(), mit der NaN-Werte identifiziert werden können.	
+	In Qlik kann sich über die allgemeine Struktur des Datensatzes in dem Overview Reiter eine gute Übersicht gebildet werden. Für weitere Details kann in den Fields Reiter gewechselt werden, um Informationen über die verteilung der Werte in den einzelnen Spalten zu erhalten. Zudem ist hier in Einblick der ersten 10 Zeilen in Tabellenform zu finden und eine Auflistung der einzelnen Spalten inklusive Datentyp. Darüber hinaus ist es in Qlik zusätzlich eine Option, einfache Visualisierungen zu erstellen um einen Überblick über den Datensatz zu bekommn, da dieser Vorgang im Gegensatz zu Python nur wenige Sekunden in Anspruch nimmt, aber genaueres dazu später im Abschnitt Modeling. NaN-Werte lassen sich mit Qlik zwar identifizieren, dieser Prozess ist aber weniger intuitiv, da es keine direkte Funktion dazu gibt, sondern ein extra Skript erstellt werden muss. Dieses Skript muss in der Qlik Sense eigenen Skriptsprache erstellt werden, welche sehr ähnlich zu SQL ist. Durch diese Skriptfunktion können mit Qlik sehr viele sehr mächtige Dinge bewirkt werden, es muss aber die Sprache dazu beherrscht werden.
 	
 	\subsection{Data Preperation}
 	Im Data Preparation-Schritt geht es darum, die Daten für die Analyse vorzubereiten, indem sie gereinigt, transformiert und in das richtige Datenformat gebracht werden, um sicherzustellen, dass sie für den Modellierungsschritt geeignet sind.
