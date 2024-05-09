@@ -1,8 +1,11 @@
 import sys
 import os
 import pandas as pd
-parent_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-sys.path.append(parent_dir)
+
+# Importing necessary modules
+parent_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..')) # Getting the parent directory path
+sys.path.append(parent_dir) # Appending parent directory to system path for module import
+
 from python_param import folder_path
 
 # Define a function to process CSV files in a given folder
