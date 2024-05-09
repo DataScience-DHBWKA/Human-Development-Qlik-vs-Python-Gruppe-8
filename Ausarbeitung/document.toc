@@ -12,11 +12,11 @@
 \contentsline {section}{\numberline {3}SWOT Analyse}{10}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Python}{10}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Qlik}{10}{subsection.3.2}%
-\contentsline {subsubsection}{\numberline {3.2.1}Data Scientist}{10}{subsubsection.3.2.1}%
-\contentsline {subsubsection}{\numberline {3.2.2}Betrieblicher Entscheider}{10}{subsubsection.3.2.2}%
-\contentsline {subsubsection}{\numberline {3.2.3}Data Scientist}{11}{subsubsection.3.2.3}%
-\contentsline {subsubsection}{\numberline {3.2.4}Betrieblicher Entscheider}{12}{subsubsection.3.2.4}%
-\contentsline {section}{\numberline {4}Fazit}{13}{section.4}%
-\contentsline {section}{\numberline {5}Quellen}{14}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Quellen Datensätze}{14}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}weitere Quellen}{15}{subsection.5.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Data Scientist}{11}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}Betrieblicher Entscheider}{11}{subsubsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.3}Data Scientist}{12}{subsubsection.3.2.3}%
+\contentsline {subsubsection}{\numberline {3.2.4}Betrieblicher Entscheider}{13}{subsubsection.3.2.4}%
+\contentsline {section}{\numberline {4}Fazit}{14}{section.4}%
+\contentsline {section}{\numberline {5}Quellen}{15}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Quellen Datensätze}{15}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}weitere Quellen}{16}{subsection.5.2}%
