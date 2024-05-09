@@ -7,7 +7,7 @@
 \contentsline {subsection}{\numberline {2.1}Einleitung Vergleich}{4}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Data Understanding}{4}{subsection.2.2}%
 \contentsline {subsection}{\numberline {2.3}Data Preparation}{9}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Modeling}{10}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.4}Modeling}{9}{subsection.2.4}%
 \contentsline {subsection}{\numberline {2.5}Sonstiges}{12}{subsection.2.5}%
 \contentsline {section}{\numberline {3}SWOT Analyse}{13}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Python}{13}{subsection.3.1}%
