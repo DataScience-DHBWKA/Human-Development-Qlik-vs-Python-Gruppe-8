@@ -1,6 +1,12 @@
+import os
+import sys
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+
+# Importing necessary modules
+parent_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..')) # Getting the parent directory path
+sys.path.append(parent_dir) # Appending parent directory to system path for module import
 from Data_method.Suicide_df import suicide_df
 from Data_method.WHR2021_df import WHR2021_df
 

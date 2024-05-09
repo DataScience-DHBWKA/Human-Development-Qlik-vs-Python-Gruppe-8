@@ -1,6 +1,11 @@
-import pandas as pd
+import os
+import sys
 import seaborn as sns
 import matplotlib.pyplot as plt
+
+# Importing necessary modules
+parent_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..')) # Getting the parent directory path
+sys.path.append(parent_dir) # Appending parent directory to system path for module import
 from Filtered_data import result_df
 
 # Select relevant columns

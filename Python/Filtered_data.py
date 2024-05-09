@@ -1,3 +1,9 @@
+import os
+import sys
+
+# Importing necessary modules
+parent_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..')) # Getting the parent directory path
+sys.path.append(parent_dir) # Appending parent directory to system path for module import
 from Data_method.Process_csv_files import process_csv_files
 from python_param import folder_path
 

@@ -1,8 +1,12 @@
-import pandas as pd
-import seaborn as sns
+import os
+import sys
 import matplotlib.pyplot as plt
-from Filtered_data import result_df
 import geopandas as gpd
+
+# Importing necessary modules
+parent_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..')) # Getting the parent directory path
+sys.path.append(parent_dir) # Appending parent directory to system path for module import
+from Filtered_data import result_df
 
 # Filter data for the year
 result_df_year = result_df[result_df['Year'] == "2021"]

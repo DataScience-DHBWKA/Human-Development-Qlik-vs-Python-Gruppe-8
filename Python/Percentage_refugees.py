@@ -1,9 +1,13 @@
+import os
+import sys
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 from scipy.interpolate import make_interp_spline
 
-# Load filtered data for the period from 1975 to 2021
+# Importing necessary modules
+parent_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..')) # Getting the parent directory path
+sys.path.append(parent_dir) # Appending parent directory to system path for module import
 from Filtered_data import result_df
 
 # Filter data for the period from 1975 to 2021
