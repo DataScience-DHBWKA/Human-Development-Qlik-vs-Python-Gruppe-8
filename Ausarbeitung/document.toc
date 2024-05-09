@@ -6,9 +6,9 @@
 \contentsline {section}{\numberline {2}Vergleich zwischen Qlik und Python}{4}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Einleitung Vergleich}{4}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Data Understanding}{4}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Data Preperation}{6}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Modelling}{6}{subsection.2.4}%
-\contentsline {subsection}{\numberline {2.5}Sonstiges}{6}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.3}Data Preperation}{7}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Modelling}{7}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Sonstiges}{7}{subsection.2.5}%
 \contentsline {section}{\numberline {3}SWOT Analyse ???!!!}{7}{section.3}%
 \contentsline {section}{\numberline {4}Fazit}{7}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Python}{7}{subsection.4.1}%
@@ -16,4 +16,4 @@
 \contentsline {subsection}{\numberline {4.3}Wann welches Tool}{7}{subsection.4.3}%
 \contentsline {section}{\numberline {5}Quellen}{7}{section.5}%
 \contentsline {subsection}{\numberline {5.1}Quellen Datensätze}{7}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}weitere Quellen}{7}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.2}weitere Quellen}{8}{subsection.5.2}%
